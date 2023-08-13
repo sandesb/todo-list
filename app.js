@@ -27,7 +27,8 @@ app.post("/",(req,res)=>{
 });
 
 app.get("/work", (req,res)=>{
-    res.render("list", {listTitle: "Work List", newListItems: workItems});
+   const day = date.getDay();
+    res.render("list", {listTitle: day + "\nWork List", newListItems: workItems});
 })
 
 app.get("/about", (req,res)=>{

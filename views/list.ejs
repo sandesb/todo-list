@@ -1,9 +1,16 @@
 <%- include("header") -%>
-    <div class="box" id="heading">
+<div class="box" id="heading">
     <h1><%= listTitle %></h1>
-    </div>
+    <button class="work"><a href="/work">Work</a></button>
 
-    <div class="box">
+    </div>
+    <div class="head">
+        
+        <img src="css/header.jpg" class="header_img">
+    </div>
+    
+
+    <div class="box1">
     <%  for (var i=0; i<newListItems.length; i++){ %>
     <div class="item">
         <input type="checkbox">
@@ -12,8 +19,8 @@
      <%   } %>
 
      <form class="item" action="/" method="post">
-        <input type="text" name="newItem" placeholder="New Item" autocomplete="off">
-        <button name="list" type="submit" value=<%= listTitle %>>+</button>
+        <input type="text" name="newItem" placeholder="Add New Task" autocomplete="off">
+        <button class="but" name="list" type="submit" value=<%= listTitle %>>+</button>
         </form>
     </div>
 <%- include("footer") -%>
