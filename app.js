@@ -28,7 +28,7 @@ app.post("/",(req,res)=>{
 
 app.get("/work", (req,res)=>{
    const day = date.getDay();
-    res.render("list", {listTitle: day + "\nWork List", newListItems: workItems});
+    res.render("list", {listTitle:  "Work List"+ "\n" + day , newListItems: workItems});
 })
 
 app.get("/about", (req,res)=>{
@@ -39,4 +39,3 @@ app.get("/about", (req,res)=>{
 app.listen(3000,()=>{
     console.log("server started on 3000");
 });
-
